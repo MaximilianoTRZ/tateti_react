@@ -1,2 +1,2 @@
-# TATETI in React
-TATETI desarrollado primero sin frameworks y luego con react
+# TATETI
+TATETI desarrollado primero HTML, CSS y Javascript sin frameworks y luego con React
