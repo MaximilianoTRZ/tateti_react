@@ -4,8 +4,8 @@
 let contador = 0
 
 const welcome = () => {
-//   alert(`¡Welcome to TaTeTi!
-// ■ Enter players name and press START GAME to play.`)
+  alert(`¡Welcome to TaTeTi!
+■ Enter players name and press START GAME to play.`)
 } 
 
 const enableBtnResetGame = () => {
