@@ -1,42 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TaTeTi React</title>
-    <script src="js/functions.js"></script>
-    <link rel="stylesheet" href="styles/styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaTeTi</title>
+  <script src="js/functions.js"></script>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 </head>
 <body>
-    <!--
-        Funciones
-        - Jugar tateti por turnos 2 jugadores
-        - Ingresar el nombre de cada jugador y decir cuando es el turno de cada uno
-        
-    -->
-    <div class="principal-container">
-        <div class="title">
-            TaTeTi
-        </div>
-        <div class="principal-tateti-container">
-            <div class="row-container">
-                <div class="individual-container" id="l1c1"></div>
-                <div class="individual-container" id="l1c2"></div>
-                <div class="individual-container" id="l1c3"></div>
-            </div>
-            <div class="row-container">
-                <div class="individual-container" id="l2c1"></div>
-                <div class="individual-container" id="l2c2"></div>
-                <div class="individual-container" id="l2c3"></div>
-            </div> 
-            <div class="row-container">
-                <div class="individual-container" id="l3c1"></div>
-                <div class="individual-container" id="l3c2"></div>
-                <div class="individual-container" id="l3c3"></div>
-            </div> 
-        </div>
-    </div>
+  <!--
+      Funciones
+      - Jugar tateti por turnos 2 jugadores
+      - Ingresar el nombre de cada jugador y decir cuando es el turno de cada uno
+      
+  -->
+  <div class="principal-container" >
+      <div class="title">
+          TaTeTi
+      </div>
+      <button class="button-start" onclick="getId()">Start Game</button>
+      <div class="principal-tateti-container">
+          <div class="row-container">
+              <div class="individual-container" id="l1c1"></div>
+              <div class="individual-container" id="l1c2"></div>
+              <div class="individual-container" id="l1c3"></div>
+          </div>
+          <div class="row-container">
+              <div class="individual-container" id="l2c1"></div>
+              <div class="individual-container" id="l2c2"></div>
+              <div class="individual-container" id="l2c3"></div>
+          </div> 
+          <div class="row-container">
+              <div class="individual-container" id="l3c1"></div>
+              <div class="individual-container" id="l3c2"></div>
+              <div class="individual-container" id="l3c3"></div>
+          </div> 
+      </div>
+  </div>
+
+  <!-- <div id='el' class="red"> Test</div>
+  <button id='remove' onclick="remove()">Remove Class</button> -->
 
 
 
