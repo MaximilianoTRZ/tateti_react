@@ -5,7 +5,7 @@ let contador = 0
 
 const welcome = () => {
   alert(`¡Welcome to TaTeTi!
-■ Enter players name and press START GAME to play.`)
+Enter players names and press START GAME to play.`)
 } 
 
 const enableBtnResetGame = () => {
@@ -44,7 +44,7 @@ const toggleClass = (square) => {
 
 
 //chequea si hay un ganador
-const checkMove = (players) => {
+const checkWinner = (players) => {
 
   // el player 1 tiene 5 turnos
   // el player 2 tiene 4 turnos
@@ -73,6 +73,7 @@ const checkMove = (players) => {
   if(arrayPlayed.length < 3){
     return false
   }
+
   for(let i=0; i<arrayPlayed.length; i++) {
     for(let j=0; j<arrayPlayed.length; j++) {
       for(let z=0; z<arrayPlayed.length; z++) {
@@ -94,6 +95,15 @@ const checkMove = (players) => {
       }
     }
   } 
+  console.log(`movimientos ${arrayPlayed.length}`)
+  console.log(`contador ${contador}`)
+
+  if(arrayPlayed.length == 5 && contador == 8){
+    setTimeout(() => {
+      alert(`It's a Draw!`);
+      enableBtnResetGame();
+    }, 500);
+  }
 }
 
 // get the element id which was clicked
@@ -116,7 +126,7 @@ const getId = (players) => {
           players.player2.played.push(id)
           // console.log(players.player2)
         }
-        checkMove(players);
+        checkWinner(players);
         // aumenta contador
         contador++;
         // console.log(`contador -> ${contador}`);
@@ -141,13 +151,13 @@ const disableElements = () => {
   document.getElementById("player1").disabled = true;
   document.getElementById("player2").disabled = true;
   document.getElementById("start-button").disabled = true;
-  document.getElementById("start-button").classList.add("disable-square")
+  document.getElementById("start-button").classList.add("disable-square");
 }
 
 
 
 const startGame = () =>{
-  console.log("GAME STARTED")
+  console.log("GAME STARTED");
   const players = createPlayers();
   disableElements();
   enableTable();
